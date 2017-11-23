@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" href="users.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <table>
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Email Address</td>
+                <td>Phone #</td>
+            </tr>
+        </table>
+        <h2>Add User</h2>
+        <form>
+            <label>First Name</label>
+            <input type="text" name="FirstName" placeholder="First Name"><br>
+            <label>Last Name</label>
+            <input type="text" name="LastName" placeholder="Last Name"><br>
+            <label>Email Address</label>
+            <input type="text" name="emailAddress" placeholder="Email Address"><br>
+            <label>Phone #</label>
+            <input type="text" name="Phone" placeholder="Phone #"><br>
+            <button>Add User</button>
+        </form>
+    </div>
+    
+    <script>
+            $(document).ready(function(){
+            $("button").click(function(){
+                $("table").append("<tr><td>"+$('input[name="FirstName"]').val()+"</td><td>"+$('input[name="LastName"]').val()+"</td><td>"+$('input[name="emailAddress"]').val()+"</td><td>"+$('input[name="Phone"]').val()+"</td></tr>");
+                return false;
+            })
+        })
+    </script>
+</body>
+
+</html>
